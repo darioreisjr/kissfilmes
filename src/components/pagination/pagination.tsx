@@ -2,20 +2,20 @@
 import './pagination.css'
 
 
-export const Pagination = (props) => {
+export const Pagination = (props: any , value: any) => {
     const li = preparePages(props.total_pages, props.actual_page)
     return (
         <>
             <nav>
                 <footer>
                     <ul>
-                        {li ? li.map((item) =>
+                        {li ? li.map((item: any | Number) =>
                             item.selected ?
-                                <li selected key={item.pageNumber}>{item.pageNumber}</li> :
+                                <li  key={item.pageNumber}>{item.pageNumber}</li> :
                                 <li
                                     key={item.pageNumber}
                                     value={item.pageNumber}
-                                    onClick={(e) => {
+                                    onClick={(e:any) => {
                                         props.action(e.target.value.toString())
                                     }}>
                                     {item.pageNumber}
@@ -29,9 +29,9 @@ export const Pagination = (props) => {
     )
 }
 
-const preparePages = (totalPages, actual_page, pagesArray = []) => {
-    for (let i = 1; i <= totalPages; i++) {
-        actual_page === i ? pagesArray.push({ pageNumber: i, selected: true }) :
+const preparePages = ( totalPages: number, actual_page:number, pagesArray:any = []) => {
+    for (let  i = 1; i <= totalPages; i++) {
+        actual_page === i ? pagesArray.push(  { pageNumber:  i, selected: true }) :
             pagesArray.push({ pageNumber: i, selected: false })
     }
     return pagesArray

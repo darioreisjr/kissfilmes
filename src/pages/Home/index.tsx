@@ -10,9 +10,9 @@ export const Home = () => {
 
   const [searchMade, setSearchMade] = useState(false)
   const returnToHome = () => { setSearchMade(false); goToPage('1') }
-  const searchBar = useRef();
+  const searchBar = useRef<any>();
 
-  const goToPage = (pageNumber) => {
+  const goToPage:any = (pageNumber:any) => {
     Tmdb
       .get(createRequest.getMovies(pageNumber))
       .then((response) => setMoviesList(response.data))
@@ -20,7 +20,7 @@ export const Home = () => {
     searchBar.current.focus();
   }
 
-  const searchMovies = (searchedTerms) => {
+  const searchMovies = (searchedTerms:string) => {
     Tmdb
       .get(createRequest.searchMovies(searchedTerms))
       .then((response) => setMoviesList(response.data))
@@ -30,12 +30,12 @@ export const Home = () => {
 
   const LoadMovies = () => { useEffect(() => { goToPage() }, []) }
 
-  const [moviesList, setMoviesList] = useState(LoadMovies())
+  const [moviesList, setMoviesList] = useState<any>(LoadMovies())
 
   return (<>
     <SearchBar action={searchMovies} returnFunction={returnToHome}>{searchBar}</SearchBar>
     <main className='container' >
-      {moviesList ? moviesList.results.map((item) => <MovieCard key={item.id} movie={item} />) : void 0}
+      {moviesList ? moviesList.results.map((item:any) => <MovieCard key={item.id} movie={item} />) : void 0}
     </main>
     {!searchMade && moviesList ?
       <Pagination total_pages={moviesList.total_pages} actual_page={moviesList.page} action={goToPage} /> :

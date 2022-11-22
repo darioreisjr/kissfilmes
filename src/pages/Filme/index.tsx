@@ -11,11 +11,11 @@ import './filme.css'
 
 
 export default function Filme() {
-    const [movie, setMovie] = useState('')
+    const [movie, setMovie] = useState<any>('')
 
     const params = useParams()
 
-    const detalhes = (id) => {
+    const detalhes = (id: any) => {
         Tmdb
             .get(createRequest.getMovie(id))
             .then((response) => setMovie(response.data))

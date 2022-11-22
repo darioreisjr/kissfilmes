@@ -18,11 +18,26 @@
     color: tomato;
 }
 
+.container-navegacao{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 600px;
+}
+
+.menu-item{
+    font-size: 24px;
+}
+
+.menu{
+    width: 100%;
+}
+
 .container-input{
     width: 100%;
     max-width: 230px;
     margin: 1rem;
-    height: 100%;
     border-radius: 15px;
     display: flex;
     justify-content: center;

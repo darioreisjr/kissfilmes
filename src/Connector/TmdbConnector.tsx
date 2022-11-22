@@ -12,11 +12,11 @@ export const createRequest = {
     return (`/movie/upcoming?api_key=${api_key}&language=${language}&page=${pageNumber}`)
   },
 
-    'getMovie':(id) => {
+    'getMovie':(id:number) => {
       return (`/movie/${id}?api_key=${api_key}&language=${language}`)
     },
 
-  'searchMovies': (searchedTerms) => {
+  'searchMovies': (searchedTerms: number | string) => {
     return (`/search/movie?api_key=${api_key}&query=${searchedTerms}`)
   }
 }

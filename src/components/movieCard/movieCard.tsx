@@ -4,11 +4,11 @@ import { FaStar } from "react-icons/fa";
 import './movieCard.css'
 
 
-export const MovieCard = (props) => {
+export const MovieCard = (props: any) => {
 
     const imgBaseUrl = 'http://image.tmdb.org/t/p/w185'
 
-    function hadleDetails(id) {
+    function hadleDetails(id: number) {
         window.open("/filme/" + id, '_self')
     }
 
