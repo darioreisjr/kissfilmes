@@ -1,0 +1,74 @@
+.container-header{
+    background-color: rgb(36, 34, 34);
+    margin: 0;
+    padding: .5rem;
+    display: flex;
+    justify-content: space-between;
+    max-height: 160px;
+}
+
+.btn-logo {
+    background-color: transparent;
+    color: aliceblue;
+    padding: 15px;
+    border: none;
+}
+
+.logo span {
+    color: tomato;
+}
+
+.container-input{
+    width: 100%;
+    max-width: 230px;
+    margin: 1rem;
+    height: 100%;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #FFF;
+}
+
+.btn-pesquisa {
+    border-radius: 0;
+    border-width: 0;
+    color: tomato;
+    background-color: transparent;
+    height: 100%;
+}
+
+.input-pesquisa{
+    border-width: 0;
+    height: 50px;
+    border-radius: 15px;
+    outline: none;
+}
+
+.input-pesquisa:focus{
+    border-radius: 0;
+    color: #070707;
+    background-color: inherit;
+    border-radius: 15px;
+
+}
+
+@media only screen 
+   and (max-width : 640px) 
+   and (max-height : 1136px) {
+    .container-header{
+        padding: .0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .container-input{
+        width: 100%;
+        max-width: 310px;
+        border-radius: 10px;
+        justify-content: space-between;
+    }
+    
+}
