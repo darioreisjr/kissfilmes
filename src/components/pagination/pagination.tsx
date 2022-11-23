@@ -2,7 +2,7 @@
 import './pagination.css'
 
 
-export const Pagination = (props: any , value: any) => {
+export const Pagination = (props: any) => {
     const li = preparePages(props.total_pages, props.actual_page)
     return (
         <>
