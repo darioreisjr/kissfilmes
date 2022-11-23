@@ -12,6 +12,8 @@ export const MovieCard = (props: any) => {
         window.open("/filme/" + id, '_self')
     }
 
+    const data_formatada = props.movie.release_date.split('-').reverse().join(' - ');
+
    
 
     return (
@@ -39,7 +41,7 @@ export const MovieCard = (props: any) => {
                         </p>
 
                         <label>Data de lançamento</label>
-                        <h6>{props.movie ? props.movie.release_date : ''}</h6>
+                        <h6>{props.movie ? data_formatada : ''}</h6>
 
                         <button className='btn-details' onClick={() => hadleDetails(props.movie.id)} >
                             Detalhes
