@@ -80,7 +80,7 @@ IDE: Visual Studio Code
 
 
 
-- Deploy: Netlifly [Link do site final](https://darioreisjrkissfilmes.netlify.app/)
+- Deploy: Vercel [Link do site final](https://kissfilmes.vercel.app/)
 
 ---
 
